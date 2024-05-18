@@ -1,6 +1,7 @@
-import java.lang.reflect.Array;
+
 import java.util.*;
 
+//In observer design pattern we have a observable we have a observers and we have product.
 interface Observable<T>{
     T getData();
     void setData(T newData);
