@@ -1,9 +1,10 @@
 
+//Tree like structure
 abstract class Component{
     int size;
     String name;
     Component(String name){
-        
+
     }
     
     abstract void showSize();
