@@ -42,7 +42,7 @@ class RAZORPayAPI{
     void processRefund(Data d){
 
     }
-}
+}       
 
 
 //Concrete product
@@ -117,10 +117,12 @@ public class FactoryPattern{
 
         //Service
         PaymentProcessor clientPaymentProcessor = new CompanyPaymentGateway().getPaymentProcessor(clientData.paymentMethod);
-
         
         //Process payment
         clientPaymentProcessor.processPayment(200,clientData);
+
+
+
     }
 }
 
@@ -130,3 +132,5 @@ enum PaymentMethods{
     CRYPTO,
     BANK_TRANSFER   
 }
+
+

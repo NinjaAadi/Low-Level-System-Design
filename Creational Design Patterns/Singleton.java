@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/*
+    Name: SingleTon
+    Type: Creational Design
+    Use: When we need to have only one object and not multiple objects, we can use singleton classes
+ */
 interface Repository{
     void add(int data);
     void delete(int data);
