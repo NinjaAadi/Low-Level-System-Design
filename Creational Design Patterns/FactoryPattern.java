@@ -25,6 +25,8 @@
 
 import java.util.HashMap;
 
+
+//Product
 interface PaymentProcessor{
     Boolean processPayment(int amount,Data clienData);
 }
@@ -37,8 +39,13 @@ class RAZORPayAPI{
         //success -> update with success messege
         //failure -> update with failure messege
     }
+    void processRefund(Data d){
+
+    }
 }
 
+
+//Concrete product
 class CreditCardPaymentProcessor implements PaymentProcessor{
 
     @Override
@@ -57,9 +64,13 @@ class DebitCardPaymentProcessor implements PaymentProcessor{
         return true;
     }
 }
+
+//Factory
 interface PaymentGateway{
     public PaymentProcessor getPaymentProcessor(PaymentMethods paymentMode);
 }
+
+//Concrete factory
 class CompanyPaymentGateway implements PaymentGateway{
 
     @Override
